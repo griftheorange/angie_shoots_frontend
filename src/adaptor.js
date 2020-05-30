@@ -15,4 +15,19 @@ export default class Fetcher{
             return null
         }
     }
+
+    static uploadImages(files){
+        if(files && files.length > 0){
+            let data = new FormData()
+            for(let i = 0; i < files.length; i++){
+                data.append('files[]', files[i])
+                data.append('filenames[]', files[i].name)
+            }
+            return fetch(`${API_DOMAIN}/imagestest`, {
+                method:'POST',
+                body:data
+            })
+            .then(r => r.json())
+        }
+    }
 }
