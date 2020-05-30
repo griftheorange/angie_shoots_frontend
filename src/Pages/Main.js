@@ -8,8 +8,11 @@ function Main(props) {
 
     function handleFileSubmit(e){
         e.preventDefault()
-        Fetcher.uploadImage(e.target.querySelector('input').files[0])
-        .then(console.log)
+        let fetch = Fetcher.uploadImage(e.target.querySelector('input').files[0])
+        if(fetch){
+            fetch
+            .then(console.log)
+        }
     }
 
     return (
