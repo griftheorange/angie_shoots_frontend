@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'PlexSans';
+    src: local('PlexSans'), url(../Fonts/IBMPlexSans-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: local('Oswald'), url(../Fonts/Oswald-ExtraLight.ttf) format('truetype');
+}
+
+body {
+    margin:0;
+}
+
+div.page {
+    height:100vh;
+    width:100vw;
+    background-image: url('../Resources/Backgrounds/andrew-stutesman-l68Z6eF2peA-unsplash.jpg');
+    background-size:100%;
+    overflow-y: auto;
+}
+
+div.menu-bar {
+    width: 100%;
+    display:flex;
+    animation: slideInMenu ease 1.5s;
+    padding-top: 1em;
+    font-size: 1.3em;
+}
+
+div.menu-bar a {
+    margin: auto;
+    font-family: PlexSans;
+    color: #331f0c;
+    text-decoration: none;
+}
+
+div.content-box {
+    height:100%;
+    flex-grow: 1;
+    animation: stretchInContent ease 1.5s;
+}
+
+div.title-container {
+    font-size: 2.4em;
+    text-align: center;
+    margin:auto;
+}
+
+h1.title {
+    font-family: Oswald;
+    font-weight: 100;
+    margin-top: 0.4em;
+    text-decoration: overline;
+    color: #331f0c;
+    text-shadow: 3px 2px #9e5d1647;
+    animation: fadeInFirst ease 1s;
+}
+
+@keyframes fadeInFirst {
+    0% {opacity:0}
+    10% {opacity:0}
+    100% {opacity:1}
+}
+
+@keyframes fadeInSecond {
+    0% {opacity:0}
+    20% {opacity:0}
+    100% {opacity:1}
+}
