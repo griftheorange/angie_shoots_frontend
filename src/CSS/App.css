@@ -42,7 +42,6 @@ div.content-box {
 }
 
 div.title-container {
-    font-size: 2.4em;
     text-align: center;
     margin:auto;
 }
@@ -50,7 +49,8 @@ div.title-container {
 h1.title {
     font-family: Oswald;
     font-weight: 100;
-    margin-top: 0.4em;
+    font-size: 4.5em;
+    margin-top: 0.8em;
     text-decoration: overline;
     color: #331f0c;
     text-shadow: 3px 2px #9e5d1647;
@@ -67,4 +67,70 @@ h1.title {
     0% {opacity:0}
     20% {opacity:0}
     100% {opacity:1}
+}
+
+div.photos {
+    height:100%; 
+    width:90%; 
+    margin-left:5%;
+}
+
+div.upload-page-container {
+    width:100%;
+    height:100%;
+    display:flex;
+}
+
+div.upload-page {
+    height:90%; 
+    width:90%;
+    margin:auto;
+    padding:1em;
+    background-color: white;
+    display:flex;
+    flex-direction: column;
+}
+
+div.upload-title {
+    font-family: PlexSans;
+    color: #331f0c;
+    text-align: center;
+}
+
+div.upload-dropbox { 
+    height:30%; 
+    border:4px solid #d2d2d2;
+    display:flex;
+}
+
+div.upload-placeholder {
+    margin:auto;
+    font-family:PlexSans;
+    font-size: 1.5em;
+}
+
+div.upload-form-container {
+    flex-grow: 1;
+    border: 1px solid green;
+    display:flex;
+}
+
+div.file-queue-list {
+    width:50%;
+    border:1px solid blue;
+}
+
+div.submission {
+    width:50%;
+    border:1px solid red;
+}
+
+div.file-label {
+    display:flex
+
+}
+
+div.file-label p {
+    margin-top:0;
+    margin-bottom:0;
 }

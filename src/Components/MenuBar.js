@@ -24,7 +24,7 @@ function MenuBar(props) {
             {genMenuLinks({
                 'Home':'/',
                 'About Me':'/about-me',
-                'Also Home':'/'
+                'File Upload':'/upload'
             })}
         </div>
     );
