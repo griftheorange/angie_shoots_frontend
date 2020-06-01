@@ -51,6 +51,7 @@ h1.title {
     font-weight: 100;
     font-size: 4.5em;
     margin-top: 0.8em;
+    margin-bottom:0.4em;
     text-decoration: overline;
     color: #331f0c;
     text-shadow: 3px 2px #9e5d1647;
@@ -65,14 +66,21 @@ h1.title {
 
 @keyframes fadeInSecond {
     0% {opacity:0}
-    20% {opacity:0}
+    40% {opacity:0}
     100% {opacity:1}
 }
 
-div.photos {
+div.photos-container {
     height:100%; 
     width:90%; 
     margin-left:5%;
+}
+
+div.photos {
+    height:100%;
+    margin: auto;
+    display:flex;
+    flex-wrap: wrap;
 }
 
 div.upload-page-container {
@@ -133,4 +141,28 @@ div.file-label {
 div.file-label p {
     margin-top:0;
     margin-bottom:0;
+}
+
+div.image-card {
+    width:32%; 
+    margin:auto;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    min-width:300px;
+}
+
+div.image-card-hidden {
+    width:32%; 
+    margin:auto;
+    min-width:300px;
+    display:none
+}
+
+div.image-card a img {
+    width:100%; 
+    height:auto; 
+    min-width:300px;
+    border-right:4px solid #331f0c;
+    border-bottom:4px solid #6f441b;
+    animation: fadeInSecond ease 1.5s;
 }

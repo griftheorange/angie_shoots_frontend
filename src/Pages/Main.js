@@ -1,16 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux'
+import { Grid } from 'semantic-ui-react'
 
 function Main(props) {
 
     function genPhotos(){
+        console.log(props.images)
         return props.images.map((image) => {
             return (
-                <a href={image.route}>
-                    <img title={image.title}
-                            src={image.route}
-                            style={{width:"100%", height:'auto'}}/>
-                </a>
+                <div className='image-card'>
+                    <a href={image.route}>
+                        <img title={image.title}
+                                src={image.route}/>
+                    </a>
+                </div>
             )
         })
     }
@@ -20,8 +23,10 @@ function Main(props) {
         <div className='title-container'>
             <h1 className='title'>#AngieShoots</h1>
         </div>
-        <div className='photos'>
-            {genPhotos()}
+        <div className='photos-container'>
+            <div className='photos'>
+                {genPhotos()}
+            </div>
         </div>
         </>
     );
