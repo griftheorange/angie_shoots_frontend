@@ -1,19 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux'
 import { Grid } from 'semantic-ui-react'
 
 function Main(props) {
 
+    const [numColumns, setNumColumn] = useState(3)
+
     function genPhotos(){
-        console.log(props.images)
         return props.images.map((image) => {
             return (
-                <div className='image-card'>
-                    <a href={image.route}>
-                        <img title={image.title}
-                                src={image.route}/>
-                    </a>
-                </div>
+                <a href={image.route}>
+                    <figure className='gallery__item'>
+                        <img className='gallery__img' src={image.route}/>
+                    </figure>
+                </a>
             )
         })
     }

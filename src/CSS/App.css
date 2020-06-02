@@ -77,10 +77,22 @@ div.photos-container {
 }
 
 div.photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 20px;
+}
+
+.gallery__item {
+    margin: 0;
+}
+
+.gallery__img {
     height:100%;
-    margin: auto;
-    display:flex;
-    flex-wrap: wrap;
+    width:100%;
+    object-fit:cover;
+    border-right: 3px solid #461e04;
+    border-bottom: 3px solid #8c5227;
 }
 
 div.upload-page-container {
@@ -143,20 +155,7 @@ div.file-label p {
     margin-bottom:0;
 }
 
-div.image-card {
-    width:32%; 
-    margin:auto;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    min-width:300px;
-}
 
-div.image-card-hidden {
-    width:32%; 
-    margin:auto;
-    min-width:300px;
-    display:none
-}
 
 div.image-card a img {
     width:100%; 

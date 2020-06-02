@@ -55,12 +55,16 @@ function Upload(props) {
             let file = e.target.files[i]
             console.log(file)
             if(['image/gif', 'image/jpeg', 'image/png', 'image/tiff'].includes(file['type'])){
-                let filenames = props.fileList.map((file) => {return file.name})
-                if(filenames.includes(file.name)){
-                    props.deleteFileFromList(file.name)
-                    props.appendFileList(file)
+                if(file.size <= 10485760){
+                    let filenames = props.fileList.map((file) => {return file.name})
+                    if(filenames.includes(file.name)){
+                        props.deleteFileFromList(file.name)
+                        props.appendFileList(file)
+                    } else {
+                        props.appendFileList(file)
+                    }
                 } else {
-                    props.appendFileList(file)
+                    console.log(`${file.name} filesize too big: ${file.size}`)
                 }
             }
         }
